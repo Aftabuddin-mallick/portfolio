@@ -1,0 +1,10 @@
+@import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+@theme {
+  --font-sans: "Plus Jakarta Sans", system-ui, sans-serif;
+  --color-brand: #0d9488;
+}
+html { scroll-behavior: smooth; }
+.input { @apply w-full rounded-lg border border-slate-300 bg-white px-3 py-2 outline-none focus:border-brand focus:ring-2 focus:ring-brand/30 dark:border-slate-700 dark:bg-slate-900; }
+.btn { @apply inline-flex items-center justify-center rounded-lg bg-brand px-5 py-2.5 font-semibold text-white transition hover:opacity-90; }
+.btn-ghost { @apply inline-flex items-center justify-center rounded-lg border border-slate-300 px-5 py-2.5 font-semibold transition hover:border-brand hover:text-brand dark:border-slate-700; }
